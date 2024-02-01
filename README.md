@@ -9,7 +9,6 @@ This is a portfolio webpage showcasing my projects, skills, and experience.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
-- [License](#license)
 - [Contact](#contact)
 
 ## Description
