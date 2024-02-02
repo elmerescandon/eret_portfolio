@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react'
-import Header from '../molecules/Header/Header'
-import NavigationBar from '../molecules/NavigationBar/NavigationBar';
+import Header from '../organisms/Header/Header'
+import NavigationBar from '../organisms/NavigationBar/NavigationBar';
 import TransitionTemplate from './TransitionTemplate';
 
 const PortfolioTemplate = () => {
@@ -14,7 +14,7 @@ const PortfolioTemplate = () => {
         <div className='overflow-hidden'>
             <NavigationBar navBar={navBar} setNavBar={setNavBar} />
             <TransitionTemplate show={navBar}>
-                <Header toggleNavBar={toggleNavBar} />
+                <Header toggleNavBar={toggleNavBar} navBar={navBar} />
             </TransitionTemplate>
         </div>
     )
