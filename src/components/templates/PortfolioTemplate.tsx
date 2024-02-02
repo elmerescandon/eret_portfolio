@@ -4,7 +4,8 @@ import Header from '../organisms/Header/Header'
 import NavigationBar from '../organisms/NavigationBar/NavigationBar';
 import TransitionTemplate from './TransitionTemplate';
 import BodyTemplate from './BodyTemplate';
-import MainSection from '../organisms/MainSection/MainSection';
+import MainSection from './MainSection';
+import SecondarySection from './SecondarySection';
 
 const PortfolioTemplate = () => {
     const [navBar, setNavBar] = useState(false);
@@ -19,6 +20,7 @@ const PortfolioTemplate = () => {
                 <Header toggleNavBar={toggleNavBar} navBar={navBar} />
                 <BodyTemplate>
                     <MainSection />
+                    <SecondarySection />
                 </BodyTemplate>
             </TransitionTemplate>
         </div>
