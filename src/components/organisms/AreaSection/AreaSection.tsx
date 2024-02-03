@@ -1,10 +1,11 @@
 import AreaTitle from '@/components/molecules/AreaTitle/AreaTitle'
-import { Transition } from '@headlessui/react'
+import Project from '@/components/molecules/Project/Project'
+import IProject from '@/utils/interfaces/IProject'
 import React, { useState } from 'react'
 
 type AreaSectionProps = {
     title: string
-    projects: React.ReactNode[]
+    projects: IProject[]
 }
 
 const AreaSection = ({ title, projects }: AreaSectionProps) => {
@@ -12,23 +13,12 @@ const AreaSection = ({ title, projects }: AreaSectionProps) => {
     return (
         <div>
             <AreaTitle title={title} extend={extend} setExtend={setExtend} />
-            <Transition
-                show={extend}
-                appear={true}
-                enter="transition-transform transform duration-500 ease-out"
-                enterFrom="-translate-y-1/2"
-                enterTo="translate-y-0"
-                leave="transition-transform transform duration-500 ease-in"
-                leaveFrom="translate-y-0"
-                leaveTo="-translate-y-1/2"
-            >
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${extend ? 'max-h-[9999px]' : 'max-h-0'}`}>
                 {projects.map((project, index) => (
-                    <div key={index}>
-                        {project}
-                    </div>))
+                    <Project key={index} project={project} />
+                ))
                 }
-            </Transition>
-
+            </div>
 
         </div>
     )
