@@ -15,5 +15,6 @@ export const imageTechnologies = {
     [Techonlogies.ARDUINO]: "/technologies/arduino_icon.svg",
     [Techonlogies.JEST]: "/technologies/jest_icon.svg",
     [Techonlogies.FIGMA]: "/technologies/figma_icon.svg",
+    [Techonlogies.PYTHON]: "/technologies/python_icon.svg",
 };
 
