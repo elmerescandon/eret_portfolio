@@ -13,6 +13,7 @@ enum Techonlogies {
     JEST = 'jest',
     FIGMA = 'figma',
     SASS = 'sass',
+    PYTHON = 'python',
 }
 
 export default Techonlogies;
