@@ -16,7 +16,7 @@ const webProjects: IProject[] = [
                 url: "https://tmdb-applaudo.vercel.app",
             },
         ],
-        technologies: [Techonlogies.REACT, Techonlogies.TYPESCRIPT, Techonlogies.REDUX],
+        technologies: [Techonlogies.REACT, Techonlogies.TYPESCRIPT, Techonlogies.REDUX, Techonlogies.JEST],
         imagePath: "/projects/web/tmdb_project.png",
     },
 ];
