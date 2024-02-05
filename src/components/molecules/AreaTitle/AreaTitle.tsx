@@ -14,7 +14,7 @@ const AreaTitle = ({ title, setExtend, extend }: AreaTitleProps) => {
 
     return (
         <div className="pb-4 flex justify-between items-center">
-            <p className="text-2xl font-bold tracking-tight text-port-green">
+            <p className="text-3xl tracking-tighter font-bold text-port-green">
                 {title}
             </p>
             <button
