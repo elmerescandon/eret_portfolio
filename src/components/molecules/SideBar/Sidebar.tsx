@@ -4,7 +4,7 @@ import React from 'react'
 
 const Sidebar = () => {
     return (
-        <div className='hidden w-[72px] items-center max-lg:flex max-lg:flex-col max-md:hidden px-[18px] gap-4'>
+        <div className='hidden w-[72px] items-center max-xl:flex max-xl:flex-col max-md:hidden px-[18px] gap-4'>
             <a className='block' href='mailto:elmer.escandontufino@gmail.com' target='_blank'>
                 <Image src="icons/email_small_icon.svg" alt="Small Mail" width={36} height={36} />
             </a>
