@@ -7,7 +7,8 @@ type BodyTemplateProps = {
 const BodyTemplate = ({ children }: BodyTemplateProps) => {
     return (
         <div className='
-        max-xl:pl-[117px] pr-8
+        pt-14 px-[80px]
+        max-xl:pl-[117px] max-xl:pr-8 max-xl:pt-0
         max-lg:px-4'>{children}</div>
     )
 }
