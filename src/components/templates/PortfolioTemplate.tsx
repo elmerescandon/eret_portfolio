@@ -10,14 +10,15 @@ import Sidebar from '../molecules/SideBar/Sidebar';
 import RailBar from '../organisms/RailBar/RailBar';
 
 const PortfolioTemplate = () => {
-    const getWindowSize = () => {
-        const { innerWidth, innerHeight } = window;
-        return { innerWidth, innerHeight };
-    }
 
-    const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    const [windowSize, setWindowSize] = useState({ innerHeight: 1080, innerWidth: 1920 });
 
     useEffect(() => {
+        const getWindowSize = () => {
+            const { innerWidth, innerHeight } = window;
+            return { innerWidth, innerHeight };
+        }
         const handleWindowResize = () => {
             setWindowSize(getWindowSize());
         }
@@ -30,9 +31,11 @@ const PortfolioTemplate = () => {
     }, []);
 
     useEffect(() => {
+
         if (windowSize.innerWidth > 1280) {
             setNavBar(false)
         }
+        console.log(windowSize.innerWidth);
     }, [windowSize]);
 
 
