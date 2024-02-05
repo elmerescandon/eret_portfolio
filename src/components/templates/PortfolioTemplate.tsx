@@ -21,6 +21,7 @@ const PortfolioTemplate = () => {
                 <BodyTemplate>
                     <MainSection />
                     <SecondarySection />
+                    <p className='italic text-gray-600'>Last updated: February 2024</p>
                 </BodyTemplate>
             </TransitionTemplate>
         </div>
