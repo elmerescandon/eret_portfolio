@@ -19,7 +19,7 @@ const PortfolioTemplate = () => {
             <NavigationBar navBar={navBar} setNavBar={setNavBar} />
             <TransitionTemplate show={navBar}>
                 <Header toggleNavBar={toggleNavBar} navBar={navBar} />
-                <div className='max-lg:flex max-md:block'>
+                <div className='max-xl:flex max-md:block'>
                     {!navBar && <Sidebar />}
                     <BodyTemplate>
                         <MainSection />
