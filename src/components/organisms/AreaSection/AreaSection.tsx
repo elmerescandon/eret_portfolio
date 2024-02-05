@@ -13,9 +13,9 @@ const AreaSection = ({ title, projects }: AreaSectionProps) => {
     return (
         <div>
             <AreaTitle title={title} extend={extend} setExtend={setExtend} />
-            <div className={`overflow-hidden transition-all duration-700 ease-in-out ${extend ? 'max-h-[9999px]' : 'max-h-0'}
-                             flex justify-between items-start
-                             max-xl:flex-wrap max-xl:gap-3 
+            <div className={`
+                             flex justify-between items-start flex-col
+                             max-xl:flex-wrap max-xl:gap-3 max-xl:flex-row
                              max-md:gap-0 max-md:justify-center
                              max-sm:flex-col
                              `}>
@@ -28,5 +28,6 @@ const AreaSection = ({ title, projects }: AreaSectionProps) => {
         </div>
     )
 }
+
 
 export default AreaSection
