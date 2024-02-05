@@ -15,7 +15,7 @@ const HeaderMobile = ({ toggleNavBar, navBar }: HeaderMobileTypes) => {
 
     return (
         <div className={`hidden h-14 px-4 w-screen items-center justify-between bg-white
-                        max-lg:flex`}>
+                        max-xl:flex`}>
             <ButtonContainer onClick={toggleNavBar}>
                 {navBar ? <XMarkIcon className="h-9 font-light" /> : <FourBarIcon />}
             </ButtonContainer>
