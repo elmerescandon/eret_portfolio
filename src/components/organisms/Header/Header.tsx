@@ -10,7 +10,6 @@ type HeaderTypes = {
 const Header = ({ toggleNavBar, navBar }: HeaderTypes) => {
     return (
         <div>
-            <HeaderDesktop />
             <HeaderMobile toggleNavBar={toggleNavBar} navBar={navBar} />
         </div>
     )
