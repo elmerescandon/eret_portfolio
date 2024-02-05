@@ -5,7 +5,8 @@ import React from 'react'
 
 const CallToAction = () => {
     return (
-        <div className='pb-5 flex justify-between gap-2'>
+        <div className='pb-5 flex justify-start gap-8 max-w-[744px]
+                        max-xl:justify-between max-xl:gap-2'>
             <ButtonBlue text='Contact me' onClick={() => console.log('Contact Me')} />
             <ButtonBlue type='secondary' text='Check out my projects' onClick={() => console.log('Checkout my projects')} />
         </div>
