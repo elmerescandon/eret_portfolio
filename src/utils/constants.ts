@@ -8,7 +8,7 @@ export const imageTechnologies = {
     [Techonlogies.MATLAB]: "/technologies/matlab_icon.svg",
     [Techonlogies.C]: "/technologies/c_icon.svg",
     [Techonlogies.TAILWIND]: "/technologies/tailwind_icon.svg",
-    [Techonlogies.NEXTJS]: "/technologies/nextjs_icon.svg",
+    [Techonlogies.NEXTJS]: "/technologies/next_icon.svg",
     [Techonlogies.CPP]: "/technologies/cpp_icon.svg",
     [Techonlogies.JAVASCRIPT]: "/technologies/javascript_icon.svg",
     [Techonlogies.FIREBASE]: "/technologies/firebase_icon.svg",
