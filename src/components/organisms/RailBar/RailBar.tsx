@@ -6,11 +6,11 @@ import React from 'react'
 
 const RailBar = () => {
     return (
-        <div className='w-[360px] min-w-[300px] flex flex-col max-xl:hidden'>
+        <div className='w-[360px] min-w-[300px] flex flex-col max-xl:hidden pl-[32px]'>
             <div className='w-full h-96 flex justify-center items-center'>
                 <Image src='/icons/atom_icon.svg' alt='portofolio-logo' width={144} height={144} />
             </div>
-            <div className='w-full pl-[18px]'>
+            <div className='w-full '>
                 <SectionsBar />
                 <Pronouns />
                 <ReferenceLinks />
