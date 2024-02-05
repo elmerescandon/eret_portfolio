@@ -9,8 +9,12 @@ type ProjectProps = {
 const Project = ({ project }: ProjectProps) => {
     const { title, description, links, imagePath, technologies, launchDate } = project;
     return (
-        <div className='pb-9 max-w-96'>
-            <img src={imagePath} alt="project-image" className='w-full min-h-52 pb-2' />
+        <div className='pb-9
+            max-xl:max-w-[45%]
+            max-md:max-w-none max-md:w-full'>
+            <img src={imagePath} alt="project-image" className='w-full pb-2 min-h-36
+            max-md:min-h-52
+            ' />
             <ProjectTechnologies technologies={technologies} />
             <h1 className='pb-2 font-semibold text-xl'>{title}</h1>
             <p className='pb-2 font-medium text-base'>{description}</p>
