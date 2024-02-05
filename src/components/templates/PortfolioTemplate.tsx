@@ -6,6 +6,7 @@ import TransitionTemplate from './TransitionTemplate';
 import BodyTemplate from './BodyTemplate';
 import MainSection from './MainSection';
 import SecondarySection from './SecondarySection';
+import Sidebar from '../molecules/SideBar/Sidebar';
 
 const PortfolioTemplate = () => {
     const [navBar, setNavBar] = useState(false);
@@ -18,11 +19,15 @@ const PortfolioTemplate = () => {
             <NavigationBar navBar={navBar} setNavBar={setNavBar} />
             <TransitionTemplate show={navBar}>
                 <Header toggleNavBar={toggleNavBar} navBar={navBar} />
-                <BodyTemplate>
-                    <MainSection />
-                    <SecondarySection />
-                    <p className='italic text-gray-600'>Last updated: February 2024</p>
-                </BodyTemplate>
+                <div className='max-lg:inline-block max-md:block'>
+                    {!navBar && <Sidebar />}
+                    <BodyTemplate>
+                        <MainSection />
+                        <SecondarySection />
+                        <p className='italic text-gray-600'>Last updated: February 2024</p>
+                    </BodyTemplate>
+                </div>
+
             </TransitionTemplate>
         </div>
     )
