@@ -4,7 +4,7 @@ import React from 'react'
 
 const MainSection = () => {
     return (
-        <div className='h-screen'>
+        <div>
             <Headline />
             <CallToAction />
         </div>
