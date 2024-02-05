@@ -29,6 +29,28 @@ const academiaProjects: IProject[] = [
 
     },
     {
+        title: "Kinematic control and gait planning for the Mini-Cheetah robot",
+        description: `The project is part of the Advanced Robotics course. The goal is to develop a kinematic 
+        control and gait planning using the free-floating approach and quadratic programming.`,
+        launchDate: "September 2021 - December 2021",
+        links: [
+            {
+                title: "Repository",
+                url: "https://github.com/elmerescandon/KC_GP_Quadruped",
+            },
+            {
+                title: "Notes",
+                url: "https://turtlebot3.notion.site/turtlebot3/Mini-Cheetah-07cc6632ab36498e83ff4f07a6368092",
+            },
+        ],
+        technologies: [
+            Techonlogies.MATLAB,
+            Techonlogies.PYTHON,
+            Techonlogies.CPP,
+        ],
+        imagePath: "/projects/academia/cheetah_project.png",
+    },
+    {
         title: "Hand Movement Classification: sEMG signals",
         description: `The reasearch evaluated the Fractal Dimension feature to classify hand movements using sEMG signals.
         The first part determine the dimensional distance accross each feature using a self-organizing map (SOM). 
@@ -62,12 +84,12 @@ const academiaProjects: IProject[] = [
         launchDate: "March 2018 - December 2019",
         links: [
             {
-                title: "Paper SOM",
-                url: "https://ieeexplore.ieee.org/abstract/document/9253761",
+                title: "Paper Gecko Robot",
+                url: "https://ieeexplore.ieee.org/abstract/document/8853601",
             },
             {
-                title: "Paper SVM",
-                url: "https://link.springer.com/chapter/10.1007/978-3-030-75680-2_96",
+                title: "Paper Minimax",
+                url: "https://ieeexplore.ieee.org/abstract/document/8526375/",
             },
         ],
         technologies: [
@@ -75,7 +97,7 @@ const academiaProjects: IProject[] = [
             Techonlogies.PYTHON,
             Techonlogies.CPP,
         ],
-        imagePath: "/projects/academia/hand_classification_project.png",
+        imagePath: "/projects/academia/mr_project.png",
     },
 ];
 

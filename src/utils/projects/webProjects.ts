@@ -19,6 +19,21 @@ const webProjects: IProject[] = [
         technologies: [Techonlogies.REACT, Techonlogies.TYPESCRIPT, Techonlogies.REDUX, Techonlogies.JEST],
         imagePath: "/projects/web/tmdb_project.png",
     },
+    {
+        title: "Marvel Atheneum",
+        description: `This web application display the information from the Marvel Comics API. It
+                      returns information as cards for each comic, as well as similar stories and events.
+                      The app was developed using React and Redux for the Applaudo React Trainee`,
+        launchDate: "January, 2023",
+        links: [
+            {
+                title: "Website",
+                url: "https://marvel-atheneum-8.vercel.app/",
+            },
+        ],
+        technologies: [Techonlogies.REACT, Techonlogies.TYPESCRIPT, Techonlogies.REDUX, Techonlogies.JEST],
+        imagePath: "/projects/web/marvel_project.png",
+    },
 ];
 
 export default webProjects;
