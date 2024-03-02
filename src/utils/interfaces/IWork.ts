@@ -1,6 +1,7 @@
+import IWorkTime from "./IWorkTime";
+
 interface IWork {
-  startDate: string;
-  endDate: string;
+  time: IWorkTime;
   company: string;
   position: string;
   description: string;
