@@ -16,6 +16,7 @@ const config: Config = {
         "port-orange": "#FD7C10",
         "port-pink": "#FD8DEF",
         "port-pink-bg": "EBA3ED",
+        "port-gray": "#6B7280",
       },
     },
   },
