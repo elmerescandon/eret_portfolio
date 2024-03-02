@@ -1,23 +1,21 @@
-import type { Config } from "tailwindcss";
+import type {Config} from "tailwindcss";
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/atomic-design/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
-        "port-green": "#539165",
-        "port-blue": "#3F497F",
-        "port-yellow": "#F7C04A",
-        "port-beige": "#F8F5E4"
+        "port-green": "#00C16A",
+        "port-blue": "#0E68F5",
+        "port-yellow": "#FFEE5F",
+        "port-orange": "#FD7C10",
+        "port-pink": "#FD8DEF",
+        "port-pink-bg": "EBA3ED",
       },
     },
   },
