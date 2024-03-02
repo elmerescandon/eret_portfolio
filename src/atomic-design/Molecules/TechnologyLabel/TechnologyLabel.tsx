@@ -13,7 +13,7 @@ const TechnologyLabel = ({
   return (
     <div className="flex gap-2 items-center">
       <TechnologyIcons technology={technology} />
-      <p className="text-base font-bold">{technologyTitle}</p>
+      <p className="text-base font-semibold">{technologyTitle}</p>
     </div>
   );
 };
