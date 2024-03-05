@@ -7,16 +7,21 @@ type BioTechnologiesProps = {
 };
 const BioTechnologies = ({technologies}: BioTechnologiesProps) => {
   return (
-    <div className="flex flex-wrap gap-4 justify-between">
-      {technologies.map((item, index) => {
-        return (
-          <TechnologyLabel
-            key={index}
-            technology={item.technology}
-            technologyTitle={item.technologyTitle}
-          />
-        );
-      })}
+    <div>
+      <p className="py-4 text-base font-normal">
+        Some of the technologies I've work recently:
+      </p>
+      <div className="grid grid-cols-3 gap-2">
+        {technologies.map((item, index) => {
+          return (
+            <TechnologyLabel
+              key={index}
+              technology={item.technology}
+              technologyTitle={item.technologyTitle}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
