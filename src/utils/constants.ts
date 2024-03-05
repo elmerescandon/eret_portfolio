@@ -20,8 +20,8 @@ export const imageTechnologies = {
 };
 
 export const imageCallToActions = {
-  [CallToActions.GITHUB]: "/technologies/react_icon.svg",
-  [CallToActions.MAIL]: "/technologies/typescript_icon.svg",
-  [CallToActions.GOOGLE_SHOLAR]: "/technologies/redux_icon.svg",
-  [CallToActions.LINKEDIN]: "/technologies/sass_icon.svg",
+  [CallToActions.GITHUB]: "/icons/github_small_icon.svg",
+  [CallToActions.MAIL]: "/icons/email_small_icon.svg",
+  [CallToActions.GOOGLE_SHOLAR]: "/icons/gratuation_cap_small_icon.svg",
+  [CallToActions.LINKEDIN]: "/icons/linkedin_small_icon.svg",
 };
