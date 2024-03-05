@@ -8,8 +8,8 @@ const WorkExperience = () => {
     <div className="flex flex-col justify-start items-start gap-8 max-w-[744px]">
       <p className="text-2xl font-bold tracking-wide">Work Experience</p>
       <div>
-        {workExpreience.map((work) => {
-          return <WorkCard workExperience={work} />;
+        {workExpreience.map((work, index) => {
+          return <WorkCard workExperience={work} key={index} />;
         })}
       </div>
       <ExternalLink href="" title="View Full Resumé" />
