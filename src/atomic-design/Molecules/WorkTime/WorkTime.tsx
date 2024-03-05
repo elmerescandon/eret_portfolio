@@ -8,9 +8,9 @@ type WorkTimeProps = {
 const WorkTime = ({time}: WorkTimeProps) => {
   const {startDate, endDate, duration} = time;
   return (
-    <div className="flex flex-col w-[168px] items-start">
-      <p className="font-normal text-base">{`${startDate} - ${endDate}`}</p>
-      <p className="font-semibold text-sm text-port-gray">{duration}</p>
+    <div className="w-[168px]">
+      <p className="font-medium text-base">{`${startDate} - ${endDate}`}</p>
+      <p className="font-semibold text-sm text-port-gray italic">{`(${duration})`}</p>
     </div>
   );
 };
