@@ -13,7 +13,9 @@ const CTALink = ({cta}: CTALinkProps) => {
   return (
     <div className="w-full flex justify-between">
       <CTAIcons callToAction={icon} />
-      <Link href={url}>{title}</Link>
+      <a href={url} target="_blank">
+        {title}
+      </a>
     </div>
   );
 };
