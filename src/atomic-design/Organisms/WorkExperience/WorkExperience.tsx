@@ -7,7 +7,7 @@ const WorkExperience = () => {
   return (
     <div className="flex flex-col justify-start items-start gap-8 max-w-[744px]">
       <p className="text-2xl font-bold tracking-wide">Work Experience</p>
-      <div>
+      <div className="flex flex-col gap-6">
         {workExpreience.map((work, index) => {
           return <WorkCard workExperience={work} key={index} />;
         })}
