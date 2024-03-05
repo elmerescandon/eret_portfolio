@@ -9,7 +9,7 @@ import {
 
 const NavigationBarDesktop = () => {
   return (
-    <div className="py-8 flex flex-col gap-8 justify-start">
+    <div className="fixed left-0 top-1/3 px-8 flex flex-col gap-8 justify-start w-[320px]  ">
       <PageSectionGroup sections={navigationSections} />
       <Pronouns />
       <CTALinkGroup callToActionArray={callToActionArray} />
