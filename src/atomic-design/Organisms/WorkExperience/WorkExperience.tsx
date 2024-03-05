@@ -5,7 +5,7 @@ import React from "react";
 
 const WorkExperience = () => {
   return (
-    <div className="flex flex-col justify-start items-start gap-8 max-w-[744px] w-full">
+    <div className="flex flex-col justify-start items-start gap-8 max-w-[744px] w-full h-screen">
       <p className="text-2xl font-bold tracking-wide">Work Experience</p>
       <div className="flex flex-col gap-6">
         {workExpreience.map((work, index) => {
