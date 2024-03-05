@@ -1,4 +1,5 @@
 import {imageTechnologies} from "@/utils/constants";
+import {title} from "process";
 import React from "react";
 
 type ProjectTechnologiesProps = {
@@ -13,6 +14,8 @@ const ProjectTechnologies = ({technologies}: ProjectTechnologiesProps) => {
           key={index}
           className="w-8 h-8"
           src={imageTechnologies[technology as keyof typeof imageTechnologies]}
+          alt={technology}
+          title={technology}
         />
       ))}
     </div>
