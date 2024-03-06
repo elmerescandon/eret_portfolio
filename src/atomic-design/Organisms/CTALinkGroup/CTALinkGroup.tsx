@@ -8,7 +8,7 @@ type CTALinkGroupProps = {
 
 const CTALinkGroup = ({callToActionArray}: CTALinkGroupProps) => {
   return (
-    <div className="flex flex-col gap-2 justify-start items-start">
+    <div className="flex flex-col gap-4 justify-start items-start">
       {callToActionArray.map((cta, index) => {
         return <CTALink cta={cta} key={index} />;
       })}
