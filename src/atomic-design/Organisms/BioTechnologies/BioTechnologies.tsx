@@ -9,7 +9,7 @@ const BioTechnologies = ({technologies}: BioTechnologiesProps) => {
   return (
     <div>
       <p className="py-4 text-base font-normal">
-        Some of the technologies I've work recently:
+        {`Some of the technologies I &apos ve work recently:`}
       </p>
       <div className="grid grid-cols-3 gap-2">
         {technologies.map((item, index) => {
