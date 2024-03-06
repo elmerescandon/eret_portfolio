@@ -8,8 +8,8 @@ type PageSectionGroupProps = {
 const PageSectionGroup = ({sections}: PageSectionGroupProps) => {
   return (
     <div className="flex flex-col justify-start items-start gap-8">
-      {sections.map((sections, index) => {
-        return <PageSection sectionName={sections} key={index} />;
+      {sections.map((section, index) => {
+        return <PageSection sectionName={section} key={index} />;
       })}
     </div>
   );
