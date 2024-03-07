@@ -1,12 +1,12 @@
-import PortfolioTemplate from '@/components/templates/PortfolioTemplate'
-import React from 'react'
+import PortfolioDesktop from "@/atomic-design/Templates/PortfolioDesktop";
+import React from "react";
 
 const page = () => {
   return (
     <main>
-      <PortfolioTemplate />
+      <PortfolioDesktop />
     </main>
-  )
-}
+  );
+};
 
-export default page
+export default page;

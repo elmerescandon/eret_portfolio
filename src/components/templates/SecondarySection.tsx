@@ -1,17 +1,17 @@
-import React from 'react'
-import AreaSection from '../organisms/AreaSection/AreaSection'
-import webProjects from '@/utils/projects/webProjects'
-import academiaProjects from '@/utils/projects/academiaProjects'
+import React from "react";
+import AreaSection from "../organisms/AreaSection/AreaSection";
+import webProjects from "@/utils/information/webProjects";
+import academiaProjects from "@/utils/information/academiaProjects";
 
 const SecondarySection = () => {
-    return (
-        <div>
-            <AreaSection title='Web Development' projects={webProjects} />
-            <AreaSection title='Academia' projects={academiaProjects} />
-            <AreaSection title='Design' projects={[]} />
-            <AreaSection title='Personal' projects={[]} />
-        </div>
-    )
-}
+  return (
+    <div>
+      <AreaSection title="Web Development" projects={webProjects} />
+      <AreaSection title="Academia" projects={academiaProjects} />
+      <AreaSection title="Design" projects={[]} />
+      <AreaSection title="Personal" projects={[]} />
+    </div>
+  );
+};
 
-export default SecondarySection
+export default SecondarySection;
