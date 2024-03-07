@@ -5,9 +5,13 @@ import React from "react";
 
 const ProjectExperience = () => {
   return (
-    <div className="flex flex-col flex-wrap justify-center items-start gap-8 max-w-[744px] w-[744px] h-screen">
+    <div
+      className="flex flex-col justify-center items-start gap-8 
+        max-w-[744px] w-full min-h-full h-screen  
+        max-xl:h-full"
+    >
       <p className="text-2xl font-bold tracking-wide">Projects</p>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 w-full">
         {webProjects.map((project, index) => {
           return <ProjectCard project={project} key={index} />;
         })}
