@@ -3,9 +3,10 @@ import React, {useState} from "react";
 
 type PageSectionProps = {
   sectionName: string;
+  sectionReference: React.RefObject<HTMLDivElement | null>;
 };
 
-const PageSection = ({sectionName}: PageSectionProps) => {
+const PageSection = ({sectionName, sectionReference}: PageSectionProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -16,11 +17,16 @@ const PageSection = ({sectionName}: PageSectionProps) => {
     setIsHovered(false);
   };
 
+  const scrollToView = (ref: React.RefObject<HTMLDivElement | null>) => {
+    ref.current?.scrollIntoView({behavior: "smooth", block: "center"});
+  };
+
   return (
     <button
       className="flex gap-8 items-center justify-start w-full  justify-self-start"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => scrollToView(sectionReference)}
     >
       <hr
         className={` justify-self-start border-black border-2`}
