@@ -4,7 +4,7 @@ import React from "react";
 const HeadlineDesktop = () => {
   const {black, blue, orange} = headlineSubtitle;
   return (
-    <div className="relative w-[744px]">
+    <div className="relative w-full">
       <div className="gap-4 p-8 border-4 border-black bg-white">
         <h1 className="text-4xl font-bold">{hepadlineTitle}</h1>
         <p className="text-2xl font-bold">
