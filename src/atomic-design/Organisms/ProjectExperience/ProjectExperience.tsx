@@ -5,7 +5,7 @@ import React from "react";
 
 const ProjectExperience = () => {
   return (
-    <div className="flex flex-col justify-center items-start gap-8 max-w-[744px] w-full h-screen">
+    <div className="flex flex-col flex-wrap justify-center items-start gap-8 max-w-[744px] w-[744px] h-screen">
       <p className="text-2xl font-bold tracking-wide">Projects</p>
       <div className="flex flex-col gap-6">
         {webProjects.map((project, index) => {
