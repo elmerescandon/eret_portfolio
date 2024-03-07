@@ -14,7 +14,11 @@ const PortfolioDesktop = () => {
       <NavigationBarDesktop
         sectionReferences={[viewAbout, viewExperience, viewProjects]}
       />
-      <div className="w-screen flex flex-col items-center">
+      <div
+        className="w-screen flex flex-col items-center 
+        max-2xl:pl-80
+        max-xl:pl-0"
+      >
         <div ref={viewAbout}>
           <BioGeneral />
         </div>
