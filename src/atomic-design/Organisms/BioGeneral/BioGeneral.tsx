@@ -6,7 +6,11 @@ import HeadlineDesktop from "@/atomic-design/Molecules/Headline/HeadlineDesktop"
 
 const BioGeneral = () => {
   return (
-    <div className="flex flex-col gap-16 max-w-[744px] h-screen justify-center">
+    <div
+      className="flex flex-col gap-16 justify-center
+      max-w-[744px] h-screen min-h-full
+      max-xl:h-full"
+    >
       <HeadlineDesktop />
       <div className="flex items-center justify-start gap-6">
         <BioInformation content={bioContent} technologies={bioTechnologies} />
