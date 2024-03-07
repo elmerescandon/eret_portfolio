@@ -8,8 +8,8 @@ type ProjectCardProps = {
 
 const ProjectCard = ({project}: ProjectCardProps) => {
   return (
-    <div>
-      <div>
+    <div className="w-full">
+      <div className="w-full">
         <ProjectCardDesktop project={project} />
       </div>
     </div>
