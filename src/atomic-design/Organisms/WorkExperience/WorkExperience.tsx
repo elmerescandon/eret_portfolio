@@ -7,8 +7,7 @@ const WorkExperience = () => {
   return (
     <div
       className="flex flex-col justify-center items-start gap-8 
-      max-w-[744px] w-full h-screen min-h-full
-      max-xl:h-full"
+      max-w-[744px] w-full h-screen min-h-full"
     >
       <p className="text-2xl font-bold tracking-wide">Work Experience</p>
       <div className="flex flex-col gap-6">
