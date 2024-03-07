@@ -7,10 +7,19 @@ import {
   navigationSections,
 } from "@/utils/constantsNavigation";
 
-const NavigationBarDesktop = () => {
+type NavigationBarDesktopProps = {
+  sectionReferences: React.RefObject<HTMLDivElement | null>[];
+};
+
+const NavigationBarDesktop = ({
+  sectionReferences,
+}: NavigationBarDesktopProps) => {
   return (
     <div className="fixed left-0 top-1/3 px-8 flex flex-col gap-8 justify-start w-[320px]  ">
-      <PageSectionGroup sections={navigationSections} />
+      <PageSectionGroup
+        sections={navigationSections}
+        sectionReferences={sectionReferences}
+      />
       <Pronouns />
       <CTALinkGroup callToActionArray={callToActionArray} />
     </div>
