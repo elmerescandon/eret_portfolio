@@ -4,7 +4,6 @@ import BioGeneral from "../Organisms/BioGeneral/BioGeneral";
 import WorkExperience from "../Organisms/WorkExperience/WorkExperience";
 import ProjectExperience from "../Organisms/ProjectExperience/ProjectExperience";
 import NavigationBarDesktop from "../Organisms/NavigationBar/NavigationBarDesktop";
-import INavigationRefs from "@/utils/interfaces/INavigationRefs";
 
 const PortfolioDesktop = () => {
   const viewAbout = useRef<HTMLDivElement | null>(null);
