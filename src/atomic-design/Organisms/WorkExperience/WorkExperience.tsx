@@ -15,7 +15,10 @@ const WorkExperience = () => {
           return <WorkCard workExperience={work} key={index} />;
         })}
       </div>
-      <ExternalLink href="" title="View Full Resumé" />
+      <ExternalLink
+        href="https://drive.google.com/file/d/1knuHTgCn8n1_Spk7uVWn4oyTv58OouvD/view?usp=sharing"
+        title="View Full Resumé"
+      />
     </div>
   );
 };
