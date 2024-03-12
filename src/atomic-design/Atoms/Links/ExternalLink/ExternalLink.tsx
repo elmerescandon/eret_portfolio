@@ -21,6 +21,7 @@ const ExternalLink = ({href, title}: ExternalLinkProps) => {
   return (
     <Link
       href={href}
+      target="_blank"
       className="flex items-center gap-1"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
