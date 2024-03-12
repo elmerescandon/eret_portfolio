@@ -1,11 +1,12 @@
 import ExternalLink from "@/atomic-design/Atoms/Links/ExternalLink/ExternalLink";
 import ProjectCard from "@/atomic-design/Molecules/ProjectCard/ProjectCard";
 import webProjects from "@/utils/information/webProjects";
-import React from "react";
+import React, {forwardRef} from "react";
 
-const ProjectExperience = () => {
+const ProjectExperience = forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
     <div
+      ref={ref}
       className="flex flex-col justify-center items-start gap-8 
         max-w-[744px] w-full min-h-full h-screen"
     >
@@ -18,6 +19,8 @@ const ProjectExperience = () => {
       <ExternalLink href="" title="View all projects" />
     </div>
   );
-};
+});
+
+ProjectExperience.displayName = "ProjectExperience";
 
 export default ProjectExperience;
