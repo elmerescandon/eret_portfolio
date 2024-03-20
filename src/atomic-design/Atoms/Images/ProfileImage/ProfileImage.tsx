@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 const ProfileImage = () => {
+  // TODO: Maintain aspect ratio
   return (
     <Image
       src="/images/profile_picture.svg"
