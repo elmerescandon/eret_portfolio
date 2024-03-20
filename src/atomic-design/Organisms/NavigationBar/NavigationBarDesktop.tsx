@@ -15,13 +15,14 @@ const NavigationBarDesktop = ({
   sectionReferences,
 }: NavigationBarDesktopProps) => {
   return (
-    <div className="fixed left-0 top-1/3 px-8 flex flex-col gap-8 justify-start w-[360px]">
+    <div className="fixed left-0 top-1/3 px-8 flex flex-col gap-8 justify-start min-[1440px]:w-[360px]">
       <PageSectionGroup
+        type="desktop"
         sections={navigationSections}
         sectionReferences={sectionReferences}
       />
       <Pronouns />
-      <CTALinkGroup callToActionArray={callToActionArray} />
+      <CTALinkGroup callToActionArray={callToActionArray} size="desktop" />
     </div>
   );
 };
