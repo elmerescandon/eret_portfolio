@@ -16,6 +16,7 @@ const PortfolioDesktop = () => {
       />
       <div
         className="w-screen flex flex-col items-center 
+        gap-16
         max-2xl:pl-80
         max-xl:pl-0"
       >
