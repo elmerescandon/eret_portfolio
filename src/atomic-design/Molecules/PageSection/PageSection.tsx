@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import Title from "@/atomic-design/Atoms/Typography/Title";
 import React, {useEffect, useState} from "react";
