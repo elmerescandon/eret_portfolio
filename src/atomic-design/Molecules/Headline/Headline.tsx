@@ -2,11 +2,11 @@ import Display from "@/atomic-design/Atoms/Typography/Display";
 import {headlineSubtitle, hepadlineTitle} from "@/utils/constantsHeadline";
 import React from "react";
 
-type HeadlineDesktopProps = {
+type HeadlineProps = {
   size: "desktop" | "mobile";
 };
 
-const HeadlineDesktop = ({size}: HeadlineDesktopProps) => {
+const Headline = ({size}: HeadlineProps) => {
   const {black, blue, orange} = headlineSubtitle;
   return (
     <div className="relative w-full">
@@ -31,4 +31,4 @@ const HeadlineDesktop = ({size}: HeadlineDesktopProps) => {
   );
 };
 
-export default HeadlineDesktop;
+export default Headline;
