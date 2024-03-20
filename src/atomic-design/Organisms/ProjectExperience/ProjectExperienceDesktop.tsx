@@ -11,7 +11,7 @@ const ProjectExperienceDesktop = () => {
         max-w-[744px] w-full"
     >
       <Headline type="large">Projects</Headline>
-      <div className="flex flex-col gap-6 w-full">
+      <div className="flex flex-col gap-16 w-full">
         {webProjects.map((project, index) => {
           return <ProjectCard size="desktop" project={project} key={index} />;
         })}
