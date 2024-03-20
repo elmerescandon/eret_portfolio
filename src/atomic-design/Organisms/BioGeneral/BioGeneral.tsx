@@ -4,15 +4,15 @@ import BioGeneralDesktop from "./BioGeneralDesktop";
 import BioGeneralMobile from "./BioGeneralMobile";
 
 const BioGeneral = forwardRef<HTMLDivElement, {}>((props, ref) => (
-  <div>
+  <div ref={ref}>
     <div className="hidden min-[600px]:block">
-      <BioGeneralDesktop ref={ref} />
+      <BioGeneralDesktop />
     </div>
     <div className="max-[600px]:block max-[360px]:hidden hidden">
-      <BioGeneralTablet ref={ref} />
+      <BioGeneralTablet />
     </div>
     <div className="max-[360px]:block hidden">
-      <BioGeneralMobile ref={ref} />
+      <BioGeneralMobile />
     </div>
   </div>
 ));
