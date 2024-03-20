@@ -9,7 +9,7 @@ type NavigationBarTabletProps = {
 
 const NavigationBarTablet = ({sectionReferences}: NavigationBarTabletProps) => {
   return (
-    <div className="fixed left-0  flex flex-col py-16 justify-between items-center w-[72px] h-screen">
+    <div className="fixed left-0 z-10 bg-white flex flex-col py-16 justify-between items-center w-[72px] h-screen">
       <PageSectionGroup type="tablet" sectionReferences={sectionReferences} />
       <CTALinkGroup callToActionArray={callToActionArray} size="tablet" />
     </div>
