@@ -5,12 +5,9 @@ import webProjects from "@/utils/information/webProjects";
 
 const ProjectExperienceMobile = () => {
   return (
-    <div
-      className="flex flex-col justify-center items-start gap-8 
-          max-w-[744px] w-full"
-    >
+    <div className="flex flex-col items-start gap-8 w-full">
       <Headline type="small">Projects</Headline>
-      <div className="flex flex-col gap-6 w-full">
+      <div className="flex flex-col gap-6">
         {webProjects.map((project, index) => {
           return <ProjectCard size="mobile" project={project} key={index} />;
         })}
