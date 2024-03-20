@@ -6,9 +6,10 @@ import React, {useState} from "react";
 
 type CTALinkProps = {
   cta: ICallToAction;
+  size: "tablet" | "desktop";
 };
 
-const CTALink = ({cta}: CTALinkProps) => {
+const CTALink = ({cta, size}: CTALinkProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -28,15 +29,20 @@ const CTALink = ({cta}: CTALinkProps) => {
       href={url}
       target="_blank"
     >
-      <CTAIcons callToAction={icon} />
-      <Body
-        type="large"
-        other={`${
-          isHovered ? "font-semibold" : ""
-        } transition:font-weight duration-300`}
-      >
-        {title}
-      </Body>
+      <CTAIcons
+        callToAction={icon}
+        size={`${size === "tablet" ? "large" : "small"}`}
+      />
+      {size === "desktop" && (
+        <Body
+          type="large"
+          other={`${
+            isHovered ? "font-semibold" : ""
+          } transition:font-weight duration-300`}
+        >
+          {title}
+        </Body>
+      )}
     </a>
   );
 };
