@@ -1,5 +1,6 @@
 "use client";
-import React, {use, useEffect, useState} from "react";
+import Title from "@/atomic-design/Atoms/Typography/Title";
+import React, {useEffect, useState} from "react";
 
 type PageSectionProps = {
   sectionName: string;
@@ -23,7 +24,6 @@ const PageSection = ({sectionName, sectionReference}: PageSectionProps) => {
   };
 
   useEffect(() => {
-    console.log("hola");
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsObserved(entry.isIntersecting);
@@ -59,16 +59,15 @@ const PageSection = ({sectionName, sectionReference}: PageSectionProps) => {
           borderColor: isHovered || isObserved ? "black" : "#6B7280",
         }}
       />
-      <p
-        className="text-2xl"
-        style={{
-          fontWeight: isHovered || isObserved ? "bold" : "normal",
-          color: isHovered || isObserved ? "black" : "#6B7280",
-          transition: "color 0.5s",
-        }}
+      <Title
+        bold={isHovered || isObserved}
+        type="large"
+        other={`transition-colors duration-500 ${
+          isHovered || isObserved ? "text-black" : "text-gray-400"
+        }`}
       >
         {sectionName}
-      </p>
+      </Title>
     </button>
   );
 };
