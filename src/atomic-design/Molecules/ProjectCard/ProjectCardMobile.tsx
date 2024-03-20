@@ -12,7 +12,7 @@ type ProjectCardMobileProps = {
 const ProjectCardMobile = ({project}: ProjectCardMobileProps) => {
   const {imagePath, title, technologies, links} = project;
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full">
       <ProjectImage src={imagePath} alt={`image-${title}`} />
       <Headline type="small">{title}</Headline>
       <ProjectTechnologies size="small" technologies={technologies} />
