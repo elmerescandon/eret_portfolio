@@ -8,12 +8,12 @@ const WorkExperience = forwardRef<HTMLDivElement, {}>((props, ref) => {
     <div
       ref={ref}
       className="flex flex-col justify-center items-start gap-8 
-      max-w-[744px] w-full h-screen min-h-full"
+      max-w-[744px]"
     >
       <p className="text-2xl font-bold tracking-wide">Work Experience</p>
       <div className="flex flex-col gap-6">
         {workExpreience.map((work, index) => {
-          return <WorkCard workExperience={work} key={index} />;
+          return <WorkCard size="desktop" workExperience={work} key={index} />;
         })}
       </div>
       <ExternalLink
