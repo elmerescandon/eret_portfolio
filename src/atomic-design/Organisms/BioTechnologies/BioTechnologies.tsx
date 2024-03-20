@@ -4,8 +4,9 @@ import React from "react";
 
 type BioTechnologiesProps = {
   technologies: ITechnologiesLabel[];
+  size: "big" | "small";
 };
-const BioTechnologies = ({technologies}: BioTechnologiesProps) => {
+const BioTechnologies = ({technologies, size}: BioTechnologiesProps) => {
   return (
     <div>
       <p className="py-4 text-base font-normal">
@@ -15,6 +16,7 @@ const BioTechnologies = ({technologies}: BioTechnologiesProps) => {
         {technologies.map((item, index) => {
           return (
             <TechnologyLabel
+              size={size}
               key={index}
               technology={item.technology}
               technologyTitle={item.technologyTitle}
