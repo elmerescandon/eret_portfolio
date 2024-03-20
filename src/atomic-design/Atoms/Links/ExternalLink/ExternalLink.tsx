@@ -2,6 +2,7 @@
 import {ArrowUpRightIcon} from "@heroicons/react/24/outline";
 import Link from "next/link";
 import React, {useState} from "react";
+import Label from "../../Typography/Label";
 
 type ExternalLinkProps = {
   href: string;
@@ -26,15 +27,9 @@ const ExternalLink = ({href, title}: ExternalLinkProps) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <p
-        className="text-base"
-        style={{
-          fontWeight: isHovered ? "bold" : "normal",
-          transition: "font-weight 0.2s",
-        }}
-      >
+      <Label type="large" other="hover:font-bold transition:font-weight-0.2s">
         {title}
-      </p>
+      </Label>
       <ArrowUpRightIcon
         height={16}
         width={16}
