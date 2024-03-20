@@ -1,22 +1,16 @@
-import ExternalLink from "@/atomic-design/Atoms/Links/ExternalLink/ExternalLink";
-import ProjectCard from "@/atomic-design/Molecules/ProjectCard/ProjectCard";
-import webProjects from "@/utils/information/webProjects";
 import React, {forwardRef} from "react";
+import ProjectExperienceMobile from "./ProjectExperienceMobile";
+import ProjectExperienceDesktop from "./ProjectExperienceDesktop";
 
 const ProjectExperience = forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
-    <div
-      ref={ref}
-      className="flex flex-col justify-center items-start gap-8 
-        max-w-[744px] w-full min-h-full"
-    >
-      <p className="text-2xl font-bold tracking-wide">Projects</p>
-      <div className="flex flex-col gap-6 w-full">
-        {webProjects.map((project, index) => {
-          return <ProjectCard size="desktop" project={project} key={index} />;
-        })}
+    <div ref={ref}>
+      <div className="hidden min-[600px]:block">
+        <ProjectExperienceDesktop />
       </div>
-      <ExternalLink href="" title="View all projects" />
+      <div className="hidden max-[600px]:block">
+        <ProjectExperienceMobile />
+      </div>
     </div>
   );
 });
