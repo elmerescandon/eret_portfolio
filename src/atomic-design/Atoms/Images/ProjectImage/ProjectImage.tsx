@@ -9,7 +9,7 @@ type ProjectImageProps = {
 const ProjectImage = ({src, alt}: ProjectImageProps) => {
   // TODO: Maintain aspect ratio
   return (
-    <div className="relative w-full aspect-video min-[1440px]:max-w-[456px]">
+    <div className="relative w-full aspect-video min-[1440px]:max-w-[360px]">
       <Image
         src={src}
         alt={alt}
