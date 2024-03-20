@@ -2,7 +2,7 @@ import React, {forwardRef} from "react";
 import BioInformation from "../BioInformation/BioInformation";
 import {bioContent, bioTechnologies} from "@/utils/constantsBio";
 import ProfileImage from "@/atomic-design/Atoms/Images/ProfileImage/ProfileImage";
-import HeadlineDesktop from "@/atomic-design/Molecules/Headline/HeadlineDesktop";
+import Headline from "@/atomic-design/Molecules/Headline/Headline";
 
 const BioGeneral = forwardRef<HTMLDivElement, {}>((props, ref) => (
   <div
@@ -10,7 +10,7 @@ const BioGeneral = forwardRef<HTMLDivElement, {}>((props, ref) => (
     className="flex flex-col gap-16 justify-center
       max-w-[744px] h-screen min-h-full"
   >
-    <HeadlineDesktop />
+    <Headline size="desktop" />
     <div className="flex items-center justify-start gap-6">
       <BioInformation content={bioContent} technologies={bioTechnologies} />
       <ProfileImage />
