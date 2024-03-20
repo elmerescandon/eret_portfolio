@@ -1,6 +1,6 @@
 import IWork from "@/utils/interfaces/IWork";
 import React from "react";
-import WorkExperienceTime from "../WorkTime/WorkTime";
+import WorkExperienceTime from "../WorkTime/WorkTime.tsx";
 import ProjectTechnologies from "../ProjectTechnologies/ProjectTechnologies";
 
 type WorkCardProps = {
