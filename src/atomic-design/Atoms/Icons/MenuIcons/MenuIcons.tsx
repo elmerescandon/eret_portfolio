@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 type MenuIconsProps = {
-  icon: "briefcase" | "terminal" | "user" | "exit";
+  icon: "briefcase" | "terminal" | "user";
 };
 
 export const MenuIcons = ({icon}: MenuIconsProps) => {
