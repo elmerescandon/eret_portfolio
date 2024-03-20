@@ -3,20 +3,20 @@ import IProject from "@/utils/interfaces/IProject";
 import React from "react";
 import ProjectTechnologies from "../ProjectTechnologies/ProjectTechnologies";
 import ProjectLinks from "../ProjectLinks/ProjectLinks";
+import Headline from "@/atomic-design/Atoms/Typography/Headline";
 
 type ProjectCardMobileProps = {
   project: IProject;
 };
 
 const ProjectCardMobile = ({project}: ProjectCardMobileProps) => {
-  const {imagePath, title, technologies, description, links} = project;
+  const {imagePath, title, technologies, links} = project;
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <ProjectImage src={imagePath} alt={`image-${title}`} />
-      <ProjectTechnologies technologies={technologies} />
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <ProjectLinks links={links} />
+      <Headline type="small">{title}</Headline>
+      <ProjectTechnologies size="small" technologies={technologies} />
+      <ProjectLinks size="mobile" links={links} />
     </div>
   );
 };
