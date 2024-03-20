@@ -1,5 +1,6 @@
 "use client";
 import CTAIcons from "@/atomic-design/Atoms/Icons/CTAIcons/CTAIcons";
+import Body from "@/atomic-design/Atoms/Typography/Body";
 import ICallToAction from "@/utils/interfaces/ICallToAction";
 import React, {useState} from "react";
 
@@ -28,14 +29,14 @@ const CTALink = ({cta}: CTALinkProps) => {
       target="_blank"
     >
       <CTAIcons callToAction={icon} />
-      <p
-        style={{
-          fontWeight: isHovered ? "bold" : "normal",
-          transition: "font-weight 0.2s",
-        }}
+      <Body
+        type="large"
+        other={`${
+          isHovered ? "font-semibold" : ""
+        } transition:font-weight duration-300`}
       >
         {title}
-      </p>
+      </Body>
     </a>
   );
 };
