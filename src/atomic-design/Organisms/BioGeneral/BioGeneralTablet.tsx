@@ -5,10 +5,7 @@ import {bioTechnologies} from "@/utils/constantsBio";
 import ProfileImage from "@/atomic-design/Atoms/Images/ProfileImage/ProfileImage";
 
 const BioGeneralTablet = forwardRef<HTMLDivElement, {}>((props, ref) => (
-  <div
-    ref={ref}
-    className=" px-8 flex flex-col gap-4 justify-center items-center"
-  >
+  <div ref={ref} className="flex flex-col gap-4 justify-center items-center">
     <Headline size="mobile" />
     <ProfileImage />
     <BioInformation size="tablet" technologies={bioTechnologies} />
