@@ -15,7 +15,7 @@ const NavigationBarDesktop = ({
   sectionReferences,
 }: NavigationBarDesktopProps) => {
   return (
-    <div className="fixed left-0 top-1/3 px-8 flex flex-col gap-8 justify-start w-[320px]  ">
+    <div className="fixed left-0 top-1/3 px-8 flex flex-col gap-8 justify-start w-[360px]">
       <PageSectionGroup
         sections={navigationSections}
         sectionReferences={sectionReferences}
