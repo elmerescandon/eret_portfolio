@@ -35,7 +35,7 @@ const Body = ({
       className = "";
   }
 
-  return <p className={`${className} ${other} max-w-[640px]`}>{children}</p>;
+  return <p className={`${className} ${other}`}>{children}</p>;
 };
 
 export default Body;
