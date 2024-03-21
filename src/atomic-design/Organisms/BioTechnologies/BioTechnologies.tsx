@@ -14,7 +14,9 @@ const BioTechnologies = ({technologies, size}: BioTechnologiesProps) => {
       </p>
       <div
         className="grid grid-cols-3 gap-2 
-        max-[460px]:flex max-[460px]:gap-4 max-[460px]:flex-wrap"
+        max-[460px]:flex max-[460px]:gap-4 max-[460px]:flex-wrap
+        max-[460px]:justify-around
+        "
       >
         {technologies.map((item, index) => {
           return (
