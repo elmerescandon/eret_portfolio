@@ -4,11 +4,11 @@ import WorkExperienceMobile from "./WorkExperienceMobile";
 
 const WorkExperience = forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
-    <div ref={ref}>
-      <div className="hidden min-[600px]:block">
+    <div ref={ref} className="flex-grow">
+      <div className="hidden min-[905px]:block">
         <WorkExperienceDesktop />
       </div>
-      <div className="hidden max-[600px]:block">
+      <div className="hidden max-[905px]:block">
         <WorkExperienceMobile />
       </div>
     </div>
