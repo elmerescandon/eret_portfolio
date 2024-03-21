@@ -1,22 +1,19 @@
-import {imageTechnologies} from "@/utils/constants";
-import {title} from "process";
+import TechnologyIcons from "@/atomic-design/Atoms/Icons/TechnologyIcons/TechnologyIcons";
 import React from "react";
 
 type ProjectTechnologiesProps = {
   technologies: string[];
+  size: "big" | "small";
 };
 
-const ProjectTechnologies = ({technologies}: ProjectTechnologiesProps) => {
+const ProjectTechnologies = ({
+  technologies,
+  size,
+}: ProjectTechnologiesProps) => {
   return (
-    <div className="flex pb-2 gap-4 justify-start items-center">
+    <div className="flex pb-2 gap-4 justify-start items-center flex-wrap">
       {technologies.map((technology, index) => (
-        <img
-          key={index}
-          className="w-8 h-8"
-          src={imageTechnologies[technology as keyof typeof imageTechnologies]}
-          alt={technology}
-          title={technology}
-        />
+        <TechnologyIcons key={index} technology={technology} size={size} />
       ))}
     </div>
   );

@@ -1,12 +1,19 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-import React, {use, useEffect, useState} from "react";
+import Title from "@/atomic-design/Atoms/Typography/Title";
+import React, {useEffect, useState} from "react";
 
 type PageSectionProps = {
   sectionName: string;
   sectionReference: React.RefObject<HTMLDivElement | null>;
+  size: "big" | "small";
 };
 
-const PageSection = ({sectionName, sectionReference}: PageSectionProps) => {
+const PageSection = ({
+  sectionName,
+  sectionReference,
+  size,
+}: PageSectionProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isObserved, setIsObserved] = useState(false);
 
@@ -23,7 +30,6 @@ const PageSection = ({sectionName, sectionReference}: PageSectionProps) => {
   };
 
   useEffect(() => {
-    console.log("hola");
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsObserved(entry.isIntersecting);
@@ -51,24 +57,25 @@ const PageSection = ({sectionName, sectionReference}: PageSectionProps) => {
       onMouseLeave={handleMouseLeave}
       onClick={() => scrollToView(sectionReference)}
     >
-      <hr
-        className={` justify-self-start border-black border-2`}
-        style={{
-          transition: "width 0.5s",
-          width: isHovered || isObserved ? "100px" : "50px",
-          borderColor: isHovered || isObserved ? "black" : "#6B7280",
-        }}
-      />
-      <p
-        className="text-2xl"
-        style={{
-          fontWeight: isHovered || isObserved ? "bold" : "normal",
-          color: isHovered || isObserved ? "black" : "#6B7280",
-          transition: "color 0.5s",
-        }}
+      {size === "big" && (
+        <hr
+          className={` justify-self-start border-black border-2`}
+          style={{
+            transition: "width 0.5s",
+            width: isHovered || isObserved ? "100px" : "50px",
+            borderColor: isHovered || isObserved ? "black" : "#6B7280",
+          }}
+        />
+      )}
+      <Title
+        bold={isHovered || isObserved}
+        type="large"
+        other={`transition-colors duration-500 ${
+          isHovered || isObserved ? "text-black" : "text-gray-400"
+        }`}
       >
         {sectionName}
-      </p>
+      </Title>
     </button>
   );
 };

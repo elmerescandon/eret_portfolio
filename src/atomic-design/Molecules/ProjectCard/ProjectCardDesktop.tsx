@@ -3,21 +3,21 @@ import IProject from "@/utils/interfaces/IProject";
 import React from "react";
 import ProjectTechnologies from "../ProjectTechnologies/ProjectTechnologies";
 import ProjectLinks from "../ProjectLinks/ProjectLinks";
+import Headline from "@/atomic-design/Atoms/Typography/Headline";
 
 type ProjectCardDesktopProps = {
   project: IProject;
 };
 
 const ProjectCardDesktop = ({project}: ProjectCardDesktopProps) => {
-  const {title, technologies, description, links, imagePath} = project;
+  const {title, technologies, links, imagePath} = project;
   return (
-    <div className="flex flex-wrap gap-6 justify-start items-start w-full">
+    <div className="flex gap-6 justify-start items-start w-full">
       <ProjectImage alt={`img-${title}`} src={imagePath} />
-      <div className="flex flex-col gap-2 max-w-[552px]">
-        <h1 className="text-2xl font-medium">{title}</h1>
-        <p>{description}</p>
-        <ProjectLinks links={links} />
-        <ProjectTechnologies technologies={technologies} />
+      <div className="flex flex-col gap-2 w-full">
+        <Headline type="large">{title}</Headline>
+        <ProjectLinks size="desktop" links={links} />
+        <ProjectTechnologies size="small" technologies={technologies} />
       </div>
     </div>
   );

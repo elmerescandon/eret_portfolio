@@ -1,27 +1,41 @@
 "use client";
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import BioGeneral from "../Organisms/BioGeneral/BioGeneral";
 import WorkExperience from "../Organisms/WorkExperience/WorkExperience";
 import ProjectExperience from "../Organisms/ProjectExperience/ProjectExperience";
-import NavigationBarDesktop from "../Organisms/NavigationBar/NavigationBarDesktop";
+import NavigationBar from "../Organisms/NavigationBar/NavigationBar";
+import SideBar from "../Organisms/SideBar/SideBar";
 
 const PortfolioDesktop = () => {
+  const [openMenu, setOpenMenu] = useState(false);
   const viewAbout = useRef<HTMLDivElement | null>(null);
   const viewExperience = useRef<HTMLDivElement | null>(null);
   const viewProjects = useRef<HTMLDivElement | null>(null);
   return (
-    <div className="relative">
-      <NavigationBarDesktop
+    <div className="relative w-full h-full">
+      <SideBar
+        isOpen={openMenu}
         sectionReferences={[viewAbout, viewExperience, viewProjects]}
       />
-      <div
-        className="w-screen flex flex-col items-center 
-        max-2xl:pl-80
-        max-xl:pl-0"
-      >
-        <BioGeneral ref={viewAbout} />
-        <WorkExperience ref={viewExperience} />
-        <ProjectExperience ref={viewProjects} />
+      <div>
+        <NavigationBar
+          sectionReferences={[viewAbout, viewExperience, viewProjects]}
+          handleOpenMenu={() => setOpenMenu(!openMenu)}
+          openMenu={openMenu}
+        />
+        <div
+          className="flex flex-col gap-16 w-full items-center 
+        
+        max-[1600px]:pl-32 
+        max-[1280px]:px-[117px]
+        max-[905px]:pr-8
+        max-[600px]:pl-[88px]
+        max-[360px]:px-4 max-[360px]:pt-20"
+        >
+          <BioGeneral ref={viewAbout} />
+          <WorkExperience ref={viewExperience} />
+          <ProjectExperience ref={viewProjects} />
+        </div>
       </div>
     </div>
   );

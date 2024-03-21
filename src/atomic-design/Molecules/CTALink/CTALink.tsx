@@ -1,13 +1,15 @@
 "use client";
 import CTAIcons from "@/atomic-design/Atoms/Icons/CTAIcons/CTAIcons";
+import Body from "@/atomic-design/Atoms/Typography/Body";
 import ICallToAction from "@/utils/interfaces/ICallToAction";
 import React, {useState} from "react";
 
 type CTALinkProps = {
   cta: ICallToAction;
+  size: "tablet" | "desktop";
 };
 
-const CTALink = ({cta}: CTALinkProps) => {
+const CTALink = ({cta, size}: CTALinkProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -27,15 +29,20 @@ const CTALink = ({cta}: CTALinkProps) => {
       href={url}
       target="_blank"
     >
-      <CTAIcons callToAction={icon} />
-      <p
-        style={{
-          fontWeight: isHovered ? "bold" : "normal",
-          transition: "font-weight 0.2s",
-        }}
-      >
-        {title}
-      </p>
+      <CTAIcons
+        callToAction={icon}
+        size={`${size === "tablet" ? "large" : "small"}`}
+      />
+      {size === "desktop" && (
+        <Body
+          type="large"
+          other={`${
+            isHovered ? "font-semibold" : ""
+          } transition:font-weight duration-300`}
+        >
+          {title}
+        </Body>
+      )}
     </a>
   );
 };

@@ -1,18 +1,19 @@
-import IWorkTime from "@/utils/interfaces/IWorkTime";
 import React from "react";
+import WorkTimeMobile from "./WorkTimeMobile";
+import IWorkTime from "@/utils/interfaces/IWorkTime";
+import WorkTimeDesktop from "./WorkTimeDesktop";
 
 type WorkTimeProps = {
   time: IWorkTime;
+  size: "mobile" | "desktop";
 };
 
-const WorkTime = ({time}: WorkTimeProps) => {
-  const {startDate, endDate, duration} = time;
-  return (
-    <div className="w-[168px]">
-      <p className="font-medium text-base">{`${startDate} - ${endDate}`}</p>
-      <p className="font-semibold text-sm text-port-gray italic">{`(${duration})`}</p>
-    </div>
-  );
+const WorkTime = ({time, size}: WorkTimeProps) => {
+  if (size === "mobile") {
+    return <WorkTimeMobile time={time} />;
+  } else {
+    return <WorkTimeDesktop time={time} />;
+  }
 };
 
 export default WorkTime;

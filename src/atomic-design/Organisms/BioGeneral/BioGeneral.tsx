@@ -1,19 +1,18 @@
 import React, {forwardRef} from "react";
-import BioInformation from "../BioInformation/BioInformation";
-import {bioContent, bioTechnologies} from "@/utils/constantsBio";
-import ProfileImage from "@/atomic-design/Atoms/Images/ProfileImage/ProfileImage";
-import HeadlineDesktop from "@/atomic-design/Molecules/Headline/HeadlineDesktop";
+import BioGeneralTablet from "./BioGeneralTablet";
+import BioGeneralDesktop from "./BioGeneralDesktop";
+import BioGeneralMobile from "./BioGeneralMobile";
 
 const BioGeneral = forwardRef<HTMLDivElement, {}>((props, ref) => (
-  <div
-    ref={ref}
-    className="flex flex-col gap-16 justify-center
-      max-w-[744px] h-screen min-h-full"
-  >
-    <HeadlineDesktop />
-    <div className="flex items-center justify-start gap-6">
-      <BioInformation content={bioContent} technologies={bioTechnologies} />
-      <ProfileImage />
+  <div ref={ref} className="self-center">
+    <div className="hidden min-[905px]:block">
+      <BioGeneralDesktop />
+    </div>
+    <div className="max-[905px]:block max-[360px]:hidden hidden">
+      <BioGeneralTablet />
+    </div>
+    <div className="max-[360px]:block hidden">
+      <BioGeneralMobile />
     </div>
   </div>
 ));

@@ -4,11 +4,16 @@ import React from "react";
 
 type ProjectLinksProps = {
   links: ILink[];
+  size: "desktop" | "mobile";
 };
 
-const ProjectLinks = ({links}: ProjectLinksProps) => {
+const ProjectLinks = ({links, size}: ProjectLinksProps) => {
   return (
-    <div className="flex justify-start items-center gap-6">
+    <div
+      className={`flex justify-start gap-2 ${
+        size === "desktop" ? "flex-col" : "flex-row"
+      }`}
+    >
       {links.map((link, index) => (
         <ExternalLink key={index} href={link.url} title={link.title} />
       ))}

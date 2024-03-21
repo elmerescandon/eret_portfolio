@@ -1,0 +1,10 @@
+
+.project-experience{
+    align-items: center;
+}
+
+@media (max-width: 905px) {
+    .project-experience{
+        align-self: stretch;
+    }
+}

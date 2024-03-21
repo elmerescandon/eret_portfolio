@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <main>
+    <main className="w-full h-full">
       <PortfolioDesktop />
     </main>
   );
