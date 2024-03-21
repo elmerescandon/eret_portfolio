@@ -4,7 +4,7 @@ import BioGeneralDesktop from "./BioGeneralDesktop";
 import BioGeneralMobile from "./BioGeneralMobile";
 
 const BioGeneral = forwardRef<HTMLDivElement, {}>((props, ref) => (
-  <div ref={ref}>
+  <div ref={ref} className="self-center">
     <div className="hidden min-[905px]:block">
       <BioGeneralDesktop />
     </div>
