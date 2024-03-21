@@ -11,7 +11,7 @@ const NavigationBar = ({sectionReferences}: NavigationBarProps) => {
       <div className="min-[1440px]:block hidden">
         <NavigationBarDesktop sectionReferences={sectionReferences} />;
       </div>
-      <div className="max-[1440px]:block hidden">
+      <div className="max-[1440px]:block hidden max-[360px]:hidden">
         <NavigationBarTablet sectionReferences={sectionReferences} />;
       </div>
     </div>
