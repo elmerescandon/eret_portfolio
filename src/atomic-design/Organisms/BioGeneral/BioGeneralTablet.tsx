@@ -1,5 +1,5 @@
 import Headline from "@/atomic-design/Molecules/Headline/Headline";
-import React, {forwardRef} from "react";
+import React from "react";
 import BioInformation from "../BioInformation/BioInformation";
 import {bioTechnologies} from "@/utils/constantsBio";
 import ProfileImage from "@/atomic-design/Atoms/Images/ProfileImage/ProfileImage";
