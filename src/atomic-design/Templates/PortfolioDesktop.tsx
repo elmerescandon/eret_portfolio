@@ -15,7 +15,7 @@ const PortfolioDesktop = () => {
         sectionReferences={[viewAbout, viewExperience, viewProjects]}
       />
       <div
-        className="flex flex-col items-center gap-16
+        className="flex flex-col gap-16 w-full items-center
         max-[1600px]:pl-32 
         max-[1280px]:px-[117px]
         max-[905px]:pr-8
@@ -24,7 +24,7 @@ const PortfolioDesktop = () => {
       >
         <BioGeneral ref={viewAbout} />
         <WorkExperience ref={viewExperience} />
-        {/* <ProjectExperience ref={viewProjects} /> */}
+        <ProjectExperience ref={viewProjects} />
       </div>
     </div>
   );
