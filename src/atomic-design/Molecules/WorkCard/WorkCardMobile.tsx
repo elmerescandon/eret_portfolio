@@ -15,8 +15,8 @@ const WorkCardMobile = ({workExperience}: WorkCardMobile) => {
     <div className="w-full flex flex-col gap-2 ">
       <WorkTime time={time} size="mobile" />
       <div className="flex flex-col items-start gap-4 w-full">
-        <Title type="small">{`${position} · ${company} `}</Title>
-        <Body type="small">{description}</Body>
+        <Title type="medium">{`${position} · ${company} `}</Title>
+        <Body type="medium">{description}</Body>
         <ProjectTechnologies technologies={technologies} size="small" />
       </div>
     </div>
