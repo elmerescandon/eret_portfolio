@@ -5,10 +5,12 @@ import NavigationBarTablet from "./NavigationBarTablet";
 type NavigationBarProps = {
   sectionReferences: React.RefObject<HTMLDivElement | null>[];
   handleOpenMenu?: () => void;
+  openMenu?: boolean;
 };
 
 const NavigationBar = ({
   sectionReferences,
+  openMenu = false,
   handleOpenMenu = () => {},
 }: NavigationBarProps) => {
   return (
@@ -20,7 +22,11 @@ const NavigationBar = ({
         <NavigationBarTablet sectionReferences={sectionReferences} />;
       </div>
       <div className="max-[360px]:block hidden">
-        <NavigationBarMobile handleOpenMenu={handleOpenMenu} />;
+        <NavigationBarMobile
+          handleOpenMenu={handleOpenMenu}
+          openMenu={openMenu}
+        />
+        ;
       </div>
     </div>
   );
