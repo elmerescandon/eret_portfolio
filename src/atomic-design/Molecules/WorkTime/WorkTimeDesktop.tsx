@@ -9,7 +9,7 @@ type WorkTimeDesktopProps = {
 const WorkTimeDesktop = ({time}: WorkTimeDesktopProps) => {
   const {startDate, endDate, duration} = time;
   return (
-    <div className="w-[168px] flex flex-col">
+    <div className="min-w-[168px] flex flex-col">
       <Label type="large">{`${startDate} - ${endDate}`}</Label>
       <Label italicUnderline type="large">{`(${duration})`}</Label>
     </div>
