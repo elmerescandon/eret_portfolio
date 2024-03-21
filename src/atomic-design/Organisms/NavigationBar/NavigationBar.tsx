@@ -1,4 +1,5 @@
 import NavigationBarDesktop from "./NavigationBarDesktop";
+import NavigationBarMobile from "./NavigationBarMobile";
 import NavigationBarTablet from "./NavigationBarTablet";
 
 type NavigationBarProps = {
@@ -13,6 +14,9 @@ const NavigationBar = ({sectionReferences}: NavigationBarProps) => {
       </div>
       <div className="max-[1440px]:block hidden max-[360px]:hidden">
         <NavigationBarTablet sectionReferences={sectionReferences} />;
+      </div>
+      <div className="max-[360px]:block hidden">
+        <NavigationBarMobile />;
       </div>
     </div>
   );
