@@ -6,9 +6,14 @@ import React, {useEffect, useState} from "react";
 type PageSectionProps = {
   sectionName: string;
   sectionReference: React.RefObject<HTMLDivElement | null>;
+  size: "big" | "small";
 };
 
-const PageSection = ({sectionName, sectionReference}: PageSectionProps) => {
+const PageSection = ({
+  sectionName,
+  sectionReference,
+  size,
+}: PageSectionProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isObserved, setIsObserved] = useState(false);
 
@@ -52,14 +57,16 @@ const PageSection = ({sectionName, sectionReference}: PageSectionProps) => {
       onMouseLeave={handleMouseLeave}
       onClick={() => scrollToView(sectionReference)}
     >
-      <hr
-        className={` justify-self-start border-black border-2`}
-        style={{
-          transition: "width 0.5s",
-          width: isHovered || isObserved ? "100px" : "50px",
-          borderColor: isHovered || isObserved ? "black" : "#6B7280",
-        }}
-      />
+      {size === "big" && (
+        <hr
+          className={` justify-self-start border-black border-2`}
+          style={{
+            transition: "width 0.5s",
+            width: isHovered || isObserved ? "100px" : "50px",
+            borderColor: isHovered || isObserved ? "black" : "#6B7280",
+          }}
+        />
+      )}
       <Title
         bold={isHovered || isObserved}
         type="large"
