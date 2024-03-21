@@ -7,18 +7,21 @@ import {callToActionArray} from "@/utils/constantsNavigation";
 
 type NavigationBarMobileProps = {
   handleOpenMenu: () => void;
+  openMenu?: boolean;
 };
 
-const NavigationBarMobile = ({handleOpenMenu}: NavigationBarMobileProps) => {
+const NavigationBarMobile = ({
+  handleOpenMenu,
+  openMenu,
+}: NavigationBarMobileProps) => {
   const router = useRouter();
-  const [openMenu, setOpenMenu] = useState(false);
 
   const handleClickEmail = () => {
     router.push("mailto:elmer.escandontufino@gmail.com");
   };
 
   return (
-    <div className="absolute z-10 bg-white h-14 px-4 py-3 w-full flex justify-between">
+    <div className="fixed z-10 bg-white h-14 px-4 py-3 w-full flex justify-between">
       <MenuButton
         icon={`${openMenu ? "close" : "menu"}`}
         onClick={handleOpenMenu}
