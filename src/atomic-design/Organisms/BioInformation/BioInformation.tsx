@@ -13,9 +13,9 @@ const BioInformation = ({technologies, size}: BioInformationProps) => {
   switch (size) {
     case "desktop":
       return <BioInformationDesktop technologies={technologies} />;
-    case "mobile":
-      return <BioInformationTablet technologies={technologies} />;
     case "tablet":
+      return <BioInformationTablet technologies={technologies} />;
+    case "mobile":
       return <BioinformationMobile technologies={technologies} />;
   }
 };
