@@ -7,11 +7,14 @@ import React from "react";
 const ProjectExperienceDesktop = () => {
   return (
     <div
-      className="flex flex-col justify-center items-start gap-8 
-        max-w-[744px] w-full"
+      className="flex flex-col justify-end items-start gap-8  w-full
+        min-[1140px]:max-w-[880px]
+        min-[905px]:max-w-[756px]
+        min-[600px]:max-w-[480px]
+        "
     >
       <Headline type="large">Projects</Headline>
-      <div className="flex flex-col gap-16 w-full">
+      <div className="flex flex-col gap-16 w-full justify-start items-start">
         {webProjects.map((project, index) => {
           return <ProjectCard size="desktop" project={project} key={index} />;
         })}
