@@ -11,14 +11,14 @@ type BioinformationMobileProps = {
 const BioinformationMobile = ({technologies}: BioinformationMobileProps) => {
   return (
     <div className="flex flex-col gap-4">
-      <Headline type="small">About me</Headline>
-      <Body type="small">
+      <Headline type="medium">About me</Headline>
+      <Body type="medium">
         After working in research across several engineering areas, nowadays I
         spend my time in creating cutting-edge digital experiences in the web.
         In the future, I expect to become a digital product designer with a
         proficient technical background in interaction design.
       </Body>
-      <Body type="small">
+      <Body type="medium">
         I have worked building web apps for an{" "}
         <span className="font-bold">outsourcing company</span> and two
         international audio brands. Now, I lead the technical implementation of
