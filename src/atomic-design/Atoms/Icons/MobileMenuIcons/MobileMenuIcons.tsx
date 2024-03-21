@@ -8,7 +8,7 @@ type MobileMenuIconsProps = {
 const MobileMenuIcons = ({icon}: MobileMenuIconsProps) => {
   return (
     <Image
-      className="w-9 h-9 text-black"
+      className="w-9 h-9 text-black rounded-full bg-transparent"
       src={`/icons/menu/mobile/${icon}.svg`}
       alt={icon}
       width={36}
