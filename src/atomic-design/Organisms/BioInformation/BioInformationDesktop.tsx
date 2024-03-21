@@ -12,7 +12,7 @@ type BioInformationDesktopProps = {
 const BioInformationDesktop = ({technologies}: BioInformationDesktopProps) => {
   return (
     <div className="flex gap-6 items-start max-w-[880px] w-full">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 min-w-[320px]">
         <Headline type="large">About me</Headline>
         <Body type="large">
           After working in research across several engineering areas, nowadays I
