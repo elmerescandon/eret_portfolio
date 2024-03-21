@@ -12,15 +12,16 @@ const PortfolioDesktop = () => {
   const viewExperience = useRef<HTMLDivElement | null>(null);
   const viewProjects = useRef<HTMLDivElement | null>(null);
   return (
-    <div>
+    <div className="relative w-full h-full">
       <SideBar
         isOpen={openMenu}
         sectionReferences={[viewAbout, viewExperience, viewProjects]}
       />
-      <div className="relative w-full h-full">
+      <div>
         <NavigationBar
           sectionReferences={[viewAbout, viewExperience, viewProjects]}
           handleOpenMenu={() => setOpenMenu(!openMenu)}
+          openMenu={openMenu}
         />
         <div
           className="flex flex-col gap-16 w-full items-center 
