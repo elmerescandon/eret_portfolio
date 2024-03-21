@@ -14,7 +14,7 @@ const ProjectCardDesktop = ({project}: ProjectCardDesktopProps) => {
   return (
     <div className="flex gap-6 justify-start items-start w-full">
       <ProjectImage alt={`img-${title}`} src={imagePath} />
-      <div className="flex flex-col gap-2 max-w-[552px]">
+      <div className="flex flex-col gap-2 w-full">
         <Headline type="large">{title}</Headline>
         <ProjectLinks size="desktop" links={links} />
         <ProjectTechnologies size="small" technologies={technologies} />
