@@ -7,11 +7,14 @@ import React from "react";
 const WorkExperienceDesktop = () => {
   return (
     <div
-      className="flex flex-col justify-center items-start gap-8 
-    max-w-[744px]"
+      className="flex flex-col justify-center items-start gap-8 w-full 
+      max-w-[880px] 
+      max-[905px]:max-w-[756px]
+      max-[600px]:max-w-[480px]
+    "
     >
       <Headline type="large">Work Experience</Headline>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col flex-wrap gap-6">
         {workExpreience.map((work, index) => {
           return <WorkCard size="desktop" workExperience={work} key={index} />;
         })}
