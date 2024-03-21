@@ -7,7 +7,8 @@ const ProfileImage = () => {
     <Image
       src="/images/profile_picture.svg"
       alt="profile-picture"
-      className="w-[264px] h-[264px]"
+      className="w-[264px] h-[264px] 
+        max-[905px]:w-auto max-[905px]:h-auto"
       width={1000}
       height={1000}
     />
