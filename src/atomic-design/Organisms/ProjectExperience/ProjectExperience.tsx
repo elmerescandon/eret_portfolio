@@ -1,10 +1,11 @@
 import React, {forwardRef} from "react";
 import ProjectExperienceMobile from "./ProjectExperienceMobile";
 import ProjectExperienceDesktop from "./ProjectExperienceDesktop";
+import "./ProjectExperience.scss";
 
 const ProjectExperience = forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
-    <div ref={ref}>
+    <div ref={ref} className="project-experience">
       <div className="hidden min-[600px]:block">
         <ProjectExperienceDesktop />
       </div>
