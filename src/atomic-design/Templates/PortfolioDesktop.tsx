@@ -10,19 +10,21 @@ const PortfolioDesktop = () => {
   const viewExperience = useRef<HTMLDivElement | null>(null);
   const viewProjects = useRef<HTMLDivElement | null>(null);
   return (
-    <div className="relative">
+    <div className="relative w-full h-full">
       <NavigationBar
         sectionReferences={[viewAbout, viewExperience, viewProjects]}
       />
       <div
-        className="w-screen flex flex-col items-center 
-        gap-16
-        max-2xl:pl-80
-        max-xl:pl-0"
+        className="flex flex-col items-center gap-16
+        max-[1600px]:pl-32 
+        max-[1280px]:px-[117px]
+        max-[905px]:pr-8
+        max-[600px]:pl-[88px]
+        max-[360px]:px-4"
       >
         <BioGeneral ref={viewAbout} />
         <WorkExperience ref={viewExperience} />
-        <ProjectExperience ref={viewProjects} />
+        {/* <ProjectExperience ref={viewProjects} /> */}
       </div>
     </div>
   );
