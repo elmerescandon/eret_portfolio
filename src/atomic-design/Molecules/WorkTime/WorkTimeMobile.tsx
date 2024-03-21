@@ -9,9 +9,9 @@ type WorkTimeMobileProps = {
 const WorkTimeMobile = ({time}: WorkTimeMobileProps) => {
   const {startDate, endDate, duration} = time;
   return (
-    <div className="flex gap-2 items-center ">
-      <Label type="small">{`${startDate} - ${endDate}`}</Label>
-      <Label italicUnderline type="large">{`(${duration})`}</Label>
+    <div className="flex gap-2 items-center w-full">
+      <Label type="medium">{`${startDate} - ${endDate}`}</Label>
+      <Label italicUnderline type="medium">{`(${duration})`}</Label>
     </div>
   );
 };
