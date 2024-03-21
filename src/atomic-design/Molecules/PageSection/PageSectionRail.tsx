@@ -34,7 +34,7 @@ const PageSectionRail = ({
       },
       {
         rootMargin: "0px",
-        threshold: 0.5, // Callback will run when 50% of the target is visible
+        threshold: 0.3, // Callback will run when 50% of the target is visible
       }
     );
 
