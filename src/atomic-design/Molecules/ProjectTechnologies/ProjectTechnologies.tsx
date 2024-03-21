@@ -11,7 +11,7 @@ const ProjectTechnologies = ({
   size,
 }: ProjectTechnologiesProps) => {
   return (
-    <div className="flex pb-2 gap-4 justify-start items-center">
+    <div className="flex pb-2 gap-4 justify-start items-center flex-wrap">
       {technologies.map((technology, index) => (
         <TechnologyIcons key={index} technology={technology} size={size} />
       ))}
