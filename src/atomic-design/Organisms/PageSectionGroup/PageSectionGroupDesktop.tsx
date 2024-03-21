@@ -15,6 +15,7 @@ const PageSectionGroupDesktop = ({
       {sections.map((section, index) => {
         return (
           <PageSection
+            size="big"
             sectionName={section}
             key={index}
             sectionReference={sectionReferences[index]}
